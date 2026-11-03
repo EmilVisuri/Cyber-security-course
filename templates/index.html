@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oma muistio</title>
+
+  <form action="/logout" method="post">
+    <button type="submit">Kirjaudu ulos</button>
+</form>
+
+</head>
+<body>
+  <h1>Muistio</h1>
+  <p>Tallenna muistiinpanoja.</p>
+  <form method="post" action="/new">
+    <label for="title">Otsikko</label>
+    <input id="title" name="title" required maxlength="100">
+    <label for="body">Teksti</label>
+    <textarea id="body" name="body" rows="4" required></textarea>
+    <button type="submit">Tallenna</button>
+  </form>
+  <h2>Muistiinpanot</h2>
+  <form action="/search" method="get">
+    <input type="text" name="q" placeholder="Hae muistiinpanoja">
+    <button type="submit">Hae</button>
+</form>
+  <!-- NOTES -->
+</body>
+</html>
